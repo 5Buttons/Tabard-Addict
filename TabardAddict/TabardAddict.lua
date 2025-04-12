@@ -4,7 +4,7 @@
 --  ===============================
 
 -- Constants
-local TABARD_ADDICT_VERSION = "1.05.335a"
+local TABARD_ADDICT_VERSION = "1.05_3.3.5a"
 local TABARD_ADDICT_DATA_ROWS = 70
 
 -- Locals
@@ -271,7 +271,7 @@ function TabardAddict:CreateAboutTab(container)
     
     -- Add main text
     local about = AceGUI:Create("Label")
-    about:SetText("Tabard Addict is a simple mod that shows which tabards you have and have not equipped on your way to meeting the various tabard achievements. It also allows you to play dressup with tabards not available to your character.\n\nHold down CTRL and left click on a tabard icon to launch the Dressing Room.\n\nUse slash commands |cFFFF0000/ta|r or |cFFFF0000/tabardaddict|r to open and/or close the window.\n\nDownload updates and leave comments at: |cFFFFFF00wowinterface.com|r and |cFFFFFF00wow.curse.com|r\n\nAuthored by: |cFFFFFF00gmz323 (Greg)|r\nAce3 version by: You")
+    about:SetText("Tabard Addict is a simple mod that shows which tabards you have and have not equipped on your way to meeting the various tabard achievements. It also allows you to play dressup with tabards not available to your character.\n\nHold down CTRL and left click on a tabard icon to launch the Dressing Room.\n\nUse slash commands |cFFFF0000/ta|r or |cFFFF0000/tabardaddict|r to open and/or close the window.\n\nDownload updates and leave comments at: |cFFFFFF00wowinterface.com|r and |cFFFFFF00wow.curse.com|r\n\nAuthored by: |cFFFFFF00gmz323 (Greg)")
     about:SetFontObject(GameFontWhite)
     about:SetFullWidth(true)
     contentGroup:AddChild(about)
@@ -760,16 +760,16 @@ function TabardAddict_OnLoad(self)
 	-- Register the frame so it can be dragged
 	self:RegisterForDrag("LeftButton")
 
-	-- Tab Handling code
+	
 	PanelTemplates_SetNumTabs(self, 3);
 	PanelTemplates_SetTab(self, 1);
 	
-	-- show/hide panels
+	
 	TabardAddictTab1:Show();
 	TabardAddictTab2:Hide();
 	TabardAddictTab3:Hide();
 	
-	-- update portrait emblem
+	
 	SetPortraitToTexture(self.taTabardEmblem, "Interface\\ICONS\\INV_Chest_Cloth_30")
 	
 	self.taTitleText:SetText("Tabard Addict");
